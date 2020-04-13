@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="admin-mapper">
+
+	<select id="memberList"  resultType="Member">
+		SELECT * FROM MEMBER
+	</select>
+
+	<select id="teacherList" parameterType="boolean" resultType="Teacher">
+		SELECT * FROM TEACHER 
+		<if test="b"> WHERE TSTATUS='N' </if>
+	</select>
+
+	<select id="reportList" resultType="Report">
+		SELECT * FROM Report REP join member M ON(REP.userNo=M.userNo) 
+								 join review R ON(REP.RNO=R.rno) 
+								 join teacher T ON(R.TNO=T.tno)
+		WHERE R.RSTATUS='R'
+	</select>
+
+
+	<update id="tstatusY" parameterType="hashMap">
+		update teacher set tstatus = 
+		<if test="isUpdateY"> 'Y' </if>
+		<if test="!isUpdateY"> 'N' </if>
+		WHERE TNO = #{tNo}
+	</update>
+
+	<update id="RSTATUS" parameterType="hashMap">
+		<if test="isY"> update review set RSTATUS = 'Y' WHERE RNO = #{rno} </if>
+		<if test="!isY"> DELETE FROM REPORT WHERE RNO = #{rno} </if>
+	</update>
+
+	<update id="updateT" parameterType="Teacher">
+<!-- 	Teacher T = new Teacher(tNo, tName, company, subject, profileName); -->
+		update teacher
+			<set>
+				<if test="tName != null"> TNAME = #{tName} , </if>
+				<if test="company != null"> company = #{company} , </if>
+				<if test="subject != null"> subject = #{subject} , </if>
+				<if test="profileName != null"> profileName = #{profileName} , </if>
+			</set>
+		WHERE TNO = #{tNo}
+	</update>
+	
+	<delete id="deleteT" parameterType="int">
+		delete from teacher WHERE TNO = #{tNo}
+	</delete>
+	
+	<select id="selectOneMemberGraph" parameterType="int" resultType="hashmap">
+	SELECT (SELECT COUNT(*) FROM TEACHER WHERE TSTATUS = 'Y' AND USERNO = #{userNo}) M_TEACHER,
+       (SELECT COUNT(*) FROM REVIEW WHERE RSTATUS != 'Y' AND USERNO = #{userNo}) M_REVIEW,
+       (SELECT COUNT(*) FROM LIKEY WHERE RNO IN (SELECT RNO FROM REVIEW WHERE RSTATUS != 'Y' AND USERNO = #{userNo}) ) M_LIKEY,
+       (SELECT COUNT(*) FROM REVIEW WHERE RSTATUS = 'R' AND USERNO = #{userNo}) M_REPORT,
+       (SELECT COUNT(*) FROM TALK WHERE TSTATUS = 'N' AND USERNO = #{userNo})+(SELECT COUNT(*) FROM TCOMMENT WHERE CSTATUS = 'N' AND USERNO = #{userNo}) M_TALK,
+       
+       ROUND((SELECT COUNT(*) FROM TEACHER WHERE TSTATUS = 'Y' AND USERNO IS NOT NULL)/(SELECT COUNT(*) FROM MEMBER WHERE ERECIVE = 1), 2) AVG_TEACHER,
+       ROUND((SELECT COUNT(*) FROM REVIEW WHERE RSTATUS != 'Y')/(SELECT COUNT(*) FROM MEMBER WHERE ERECIVE = 1), 2) AVG_REVIEW,
+       ROUND((SELECT COUNT(*) FROM LIKEY)/(SELECT DISTINCT COUNT(RNO) FROM REVIEW WHERE RSTATUS != 'Y'), 2) AVG_LIKEY,
+       ROUND((SELECT COUNT(*) FROM REPORT)/(SELECT DISTINCT COUNT(RNO) FROM REVIEW WHERE RSTATUS != 'Y'), 2) AVG_REPORT,
+       ROUND(((SELECT COUNT(*) FROM TALK WHERE TSTATUS = 'N')+(SELECT COUNT(*) FROM TCOMMENT WHERE CSTATUS = 'N'))/(SELECT COUNT(*) FROM MEMBER WHERE ERECIVE = 1), 2) AVG_TALK
+	FROM DUAL
+	</select>
+</mapper>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

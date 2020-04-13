@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="report-mapper">
+	<select id="selectList" resultType="Report">
+		 SELECT * FROM REPORT REP JOIN MEMBER M ON (REP.USERNO = M.USERNO) 
+								  JOIN REVIEW R ON (REP.RNO=R.RNO) 
+         WHERE R.RSTATUS IN ('R','N')
+         ORDER BY REP.REF_DATE DESC
+	</select>
+
+	<select id="selectTotalContents" resultType="int">
+		SELECT COUNT(*) FROM REPORT
+	</select>
+	
+	<select id="searchReport" parameterType="String" resultType="Report">
+		SELECT *
+		FROM REPORT
+		
+		<if test="keyword != null">
+			WHERE REF_CONTENT LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+		</if>
+		ORDER BY REF_DATE DESC
+	</select>
+
+<!-- 받아오는 값이 있을때는 parameterType이 필요하다 -->
+	<select id="selectOne" parameterType="Report" resultType="Report">
+		select * from 
+		report r, member m, review rr
+		where r.userno=m.userno
+		  AND r.rno = rr.rno
+		  AND R.RNO = #{rno}
+		  and r.userno = #{userNo}
+	</select>
+	
+	<insert id="insert" parameterType="Report">
+		INSERT INTO REPORT
+		VALUES(	#{userNo},
+				#{rno},
+				#{ref_content},
+				DEFAULT)
+	</insert>
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM REPORT WHERE USERNO = #{userNo} and RNO = #{rno}
+	</delete>
+	
+	<update id="updateReview" parameterType="int">
+		UPDATE REVIEW SET RSTATUS = 'N' WHERE RNO = #{rno}
+	</update>
+	
+	
+
+</mapper>

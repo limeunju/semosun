@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="true" realizations="true" associations="true" dependencies="false" nesting-relationships="true" 
+  router="FAN">  
+  <package id="1" language="java" name="com.oceans.semosun.admin" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/admin" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="412" width="826" x="1965" y="105"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="2" language="java" name="com.oceans.semosun.admin.controller" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/admin/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="338" width="246" x="1972" y="169"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="3" language="java" name="com.oceans.semosun.admin.controller.AdminController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/admin/controller/AdminController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="279" width="191" x="1999" y="219"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="4" language="java" name="com.oceans.semosun.admin.model" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/admin/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="343" width="553" x="2226" y="164"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="5" language="java" name="com.oceans.semosun.admin.model.dao" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/admin/model/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="283" width="259" x="2512" y="216"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="6" language="java" name="com.oceans.semosun.admin.model.dao.AdminDAO" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/admin/model/dao/AdminDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="225" width="182" x="2544" y="266"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="7" language="java" name="com.oceans.semosun.admin.model.service" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/admin/model/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="281" width="271" x="2235" y="217"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="8" language="java" name="com.oceans.semosun.admin.model.service.AdminService" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/admin/model/service/AdminService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2371" y="379"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="9" language="java" name="com.oceans.semosun.common" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/common" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="275" width="518" x="2189" y="1353"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="10" language="java" name="com.oceans.semosun.common.controller" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/common/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="214" width="261" x="2195" y="1409"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="11" language="java" name="com.oceans.semosun.common.controller.IndexController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/common/controller/IndexController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2323" y="1539"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="12" language="java" name="com.oceans.semosun.common.util" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/common/util" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="213" width="228" x="2468" y="1411"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="13" language="java" name="com.oceans.semosun.common.util.Utils" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/common/util/Utils.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="199" x="2479" y="1461"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="14" language="java" name="com.oceans.semosun.like" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/like" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="220" width="312" x="2736" y="1391"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="15" language="java" name="com.oceans.semosun.like.model" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/like/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="166" width="301" x="2743" y="1440"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="16" language="java" name="com.oceans.semosun.like.model.vo" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/like/model/vo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="111" width="279" x="2754" y="1488"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="17" language="java" name="com.oceans.semosun.like.model.vo.Likey" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/like/model/vo/Likey.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="59" width="199" x="2792" y="1535"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="18" language="java" name="com.oceans.semosun.member" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="718" width="1140" x="1013" y="680"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="19" language="java" name="com.oceans.semosun.member.controller" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="652" width="263" x="1024" y="734"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="20" language="java" name="com.oceans.semosun.member.exception" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/exception" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="162" width="264" x="1296" y="735"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="21" language="java" name="com.oceans.semosun.member.model" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="656" width="568" x="1570" y="733"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="22" language="java" name="com.oceans.semosun.member.controller.LoginController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/controller/LoginController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="237" x="1034" y="784"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="com.oceans.semosun.member.controller.MemberController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/controller/MemberController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="346" width="238" x="1033" y="890"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="com.oceans.semosun.member.controller.MyPageController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/controller/MyPageController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="238" x="1033" y="1242"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="com.oceans.semosun.member.exception.MemberException" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/exception/MemberException.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1424" y="835"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="com.oceans.semosun.member.MailHandler" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/MailHandler.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1435" y="1027"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="com.oceans.semosun.member.TempKey" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/TempKey.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1432" y="1231"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="28" language="java" name="com.oceans.semosun.member.model.dao" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/model/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="481" width="262" x="1865" y="785"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="29" language="java" name="com.oceans.semosun.member.model.service" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/model/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="480" width="283" x="1577" y="784"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="30" language="java" name="com.oceans.semosun.member.model.vo" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/model/vo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="108" width="264" x="1727" y="1271"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="31" language="java" name="com.oceans.semosun.member.model.service.MemberService" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/model/service/MemberService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="423" width="264" x="1586" y="835"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="com.oceans.semosun.member.model.dao.MemberDAO" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/model/dao/MemberDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="423" width="244" x="1874" y="836"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="com.oceans.semosun.member.model.vo.Member" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/member/model/vo/Member.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="57" width="198" x="1761" y="1318"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="34" language="java" name="com.oceans.semosun.notice" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="546" width="821" x="3092" y="1284"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="35" language="java" name="com.oceans.semosun.notice.controller" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="300" width="246" x="3104" y="1338"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="36" language="java" name="com.oceans.semosun.notice.controller.NoticeController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice/controller/NoticeController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="232" x="3112" y="1387"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="37" language="java" name="com.oceans.semosun.notice.exception" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice/exception" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="167" width="252" x="3104" y="1656"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="38" language="java" name="com.oceans.semosun.notice.exception.NoticeException" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice/exception/NoticeException.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3220" y="1764"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="39" language="java" name="com.oceans.semosun.notice.model" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="487" width="543" x="3363" y="1335"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="40" language="java" name="com.oceans.semosun.notice.model.dao" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice/model/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="313" width="250" x="3647" y="1387"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="41" language="java" name="com.oceans.semosun.notice.model.service" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice/model/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="312" width="271" x="3371" y="1387"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="42" language="java" name="com.oceans.semosun.notice.model.vo" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice/model/vo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="113" width="242" x="3524" y="1705"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="43" language="java" name="com.oceans.semosun.notice.model.dao.NoticeDAO" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice/model/dao/NoticeDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="235" x="3655" y="1434"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="44" language="java" name="com.oceans.semosun.notice.model.service.NoticeService" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice/model/service/NoticeService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="256" width="257" x="3378" y="1436"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="45" language="java" name="com.oceans.semosun.notice.model.vo.Notice" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/notice/model/vo/Notice.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="60" width="172" x="3560" y="1751"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="46" language="java" name="com.oceans.semosun.qna" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="524" width="786" x="1015" y="13"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="47" language="java" name="com.oceans.semosun.qna.controller" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="316" width="237" x="1028" y="57"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="48" language="java" name="com.oceans.semosun.qna.controller.QnaController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna/controller/QnaController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="217" x="1036" y="104"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="49" language="java" name="com.oceans.semosun.qna.exception" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna/exception" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="154" width="233" x="1028" y="377"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="50" language="java" name="com.oceans.semosun.qna.exception.QnaException" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna/exception/QnaException.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1146" y="473"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="51" language="java" name="com.oceans.semosun.qna.model" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="426" width="520" x="1273" y="59"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="52" language="java" name="com.oceans.semosun.qna.model.service" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna/model/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="259" width="262" x="1285" y="105"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="53" language="java" name="com.oceans.semosun.qna.model.service.qnaService" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna/model/service/qnaService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="202" width="228" x="1300" y="155"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="54" language="java" name="com.oceans.semosun.qna.model.dao" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna/model/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="258" width="236" x="1546" y="106"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="55" language="java" name="com.oceans.semosun.qna.model.dao.qnaDAO" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna/model/dao/qnaDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="204" x="1563" y="153"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="56" language="java" name="com.oceans.semosun.qna.model.vo" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna/model/vo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="113" width="233" x="1423" y="368"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="57" language="java" name="com.oceans.semosun.qna.model.vo.Qna" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/qna/model/vo/Qna.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="60" width="191" x="1448" y="415"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="58" language="java" name="com.oceans.semosun.report" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="490" width="805" x="3077" y="469"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="59" language="java" name="com.oceans.semosun.report.controller" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="273" width="246" x="3084" y="513"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="60" language="java" name="com.oceans.semosun.report.controller.ReportController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report/controller/ReportController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="227" x="3094" y="568"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="61" language="java" name="com.oceans.semosun.report.exception" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report/exception" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="161" width="247" x="3084" y="792"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="62" language="java" name="com.oceans.semosun.report.model" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="439" width="538" x="3336" y="514"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="63" language="java" name="com.oceans.semosun.report.model.dao" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report/model/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="264" width="250" x="3616" y="563"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="64" language="java" name="com.oceans.semosun.report.model.service" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report/model/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="262" width="271" x="3342" y="564"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="65" language="java" name="com.oceans.semosun.report.model.vo" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report/model/vo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="247" x="3490" y="832"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="66" language="java" name="com.oceans.semosun.report.model.dao.ReportDAO" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report/model/dao/ReportDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="227" x="3628" y="615"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="67" language="java" name="com.oceans.semosun.report.model.service.ReportService" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report/model/service/ReportService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="207" width="249" x="3353" y="613"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="68" language="java" name="com.oceans.semosun.report.model.vo.Report" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report/model/vo/Report.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="59" width="226" x="3498" y="882"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="69" language="java" name="com.oceans.semosun.report.exception.ReportException" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/report/exception/ReportException.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3207" y="891"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="70" language="java" name="com.oceans.semosun.review" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/review" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="618" width="820" x="2177" y="689"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="71" language="java" name="com.oceans.semosun.review.controller" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/review/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="292" width="249" x="2184" y="739"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="72" language="java" name="com.oceans.semosun.review.controller.ReviewController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/review/controller/ReviewController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="231" width="236" x="2190" y="792"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="73" language="java" name="com.oceans.semosun.review.model" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/review/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="564" width="550" x="2438" y="736"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="74" language="java" name="com.oceans.semosun.review.model.service" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/review/model/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="385" width="274" x="2446" y="783"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="75" language="java" name="com.oceans.semosun.review.model.dao" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/review/model/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="389" width="253" x="2726" y="782"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="76" language="java" name="com.oceans.semosun.review.model.vo" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/review/model/vo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="245" x="2592" y="1177"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="77" language="java" name="com.oceans.semosun.review.model.service.ReviewService" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/review/model/service/ReviewService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="333" width="256" x="2456" y="831"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="78" language="java" name="com.oceans.semosun.review.model.dao.ReviewDAO" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/review/model/dao/ReviewDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="333" width="238" x="2734" y="832"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="79" language="java" name="com.oceans.semosun.review.model.vo.Review" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/review/model/vo/Review.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="61" width="176" x="2629" y="1224"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="80" language="java" name="com.oceans.semosun.search" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/search" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="546" width="817" x="1790" y="1707"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="81" language="java" name="com.oceans.semosun.search.SearchController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/search/SearchController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1923" y="1885"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="82" language="java" name="com.oceans.semosun.search.model" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/search/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="490" width="547" x="2053" y="1759"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="83" language="java" name="com.oceans.semosun.search.model.service" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/search/model/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="317" width="276" x="2058" y="1807"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="84" language="java" name="com.oceans.semosun.search.model.dao" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/search/model/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="317" width="255" x="2339" y="1808"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="85" language="java" name="com.oceans.semosun.search.model.service.SearchService" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/search/model/service/SearchService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="259" width="220" x="2088" y="1857"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="86" language="java" name="com.oceans.semosun.search.model.dao.SearchDAO" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/search/model/dao/SearchDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2467" y="1989"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="87" language="java" name="com.oceans.semosun.search.model.vo" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/search/model/vo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="114" width="247" x="2203" y="2131"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="88" language="java" name="com.oceans.semosun.search.model.vo.TalknMember" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/search/model/vo/TalknMember.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="60" width="204" x="2225" y="2179"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="89" language="java" name="com.oceans.semosun.talk" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="796" width="775" x="9" y="493"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="90" language="java" name="com.oceans.semosun.talk.controller" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="472" width="232" x="18" y="551"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="91" language="java" name="com.oceans.semosun.talk.controller.TalkCommentController" 
+    project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/controller/TalkCommentController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="164" width="220" x="26" y="851"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="92" language="java" name="com.oceans.semosun.talk.controller.TalkController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/controller/TalkController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="215" x="26" y="604"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="93" language="java" name="com.oceans.semosun.talk.exception" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/exception" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="233" x="17" y="1028"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="94" language="java" name="com.oceans.semosun.talk.exception.TalkException" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/exception/TalkException.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="134" y="1125"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="95" language="java" name="com.oceans.semosun.talk.model" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="733" width="511" x="254" y="550"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="96" language="java" name="com.oceans.semosun.talk.model.service" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/model/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="561" width="257" x="259" y="597"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="97" language="java" name="com.oceans.semosun.talk.model.dao" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/model/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="561" width="241" x="520" y="595"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="98" language="java" name="com.oceans.semosun.talk.model.service.TalkService" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/model/service/TalkService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="315" width="227" x="274" y="647"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="99" language="java" name="com.oceans.semosun.talk.model.dao.TalkDAO" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/model/dao/TalkDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="315" width="226" x="526" y="643"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="100" language="java" name="com.oceans.semosun.talk.model.dao.TalkCommentDAO" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/model/dao/TalkCommentDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="640" y="1057"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="101" language="java" name="com.oceans.semosun.talk.model.service.TalkCommentService" 
+    project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/model/service/TalkCommentService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="182" width="228" x="274" y="967"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="102" language="java" name="com.oceans.semosun.talk.model.vo" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/model/vo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="501" x="259" y="1161"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="103" language="java" name="com.oceans.semosun.talk.model.vo.Talk" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/model/vo/Talk.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="62" width="237" x="270" y="1209"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="104" language="java" name="com.oceans.semosun.talk.model.vo.TalkComment" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/talk/model/vo/TalkComment.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="62" width="236" x="514" y="1209"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="105" language="java" name="com.oceans.semosun.teacher" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/teacher" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="501" width="822" x="747" y="1562"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="106" language="java" name="com.oceans.semosun.teacher.contoller" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/teacher/contoller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="245" width="249" x="754" y="1611"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="107" language="java" name="com.oceans.semosun.teacher.model" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/teacher/model" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="446" width="554" x="1008" y="1610"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="108" language="java" name="com.oceans.semosun.teacher.model.dao" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/teacher/model/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="281" width="258" x="1297" y="1657"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="109" language="java" name="com.oceans.semosun.teacher.model.service" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/teacher/model/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="282" width="279" x="1014" y="1656"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="110" language="java" name="com.oceans.semosun.teacher.contoller.TeacherController" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/teacher/contoller/TeacherController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="232" x="763" y="1663"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="111" language="java" name="com.oceans.semosun.teacher.model.dao.TeacherDAO" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/teacher/model/dao/TeacherDAO.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1427" y="1821"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="112" language="java" name="com.oceans.semosun.teacher.model.service.TeacherInsertService" 
+    project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/teacher/model/service/TeacherInsertService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1150" y="1807"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="113" language="java" name="com.oceans.semosun.teacher.model.vo" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/teacher/model/vo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="109" width="250" x="1163" y="1941"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="114" language="java" name="com.oceans.semosun.teacher.model.vo.Teacher" project="semosunProject" 
+    file="/semosunProject/src/main/java/com/oceans/semosun/teacher/model/vo/Teacher.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="58" width="232" x="1173" y="1988"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="115">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="116" name="memberDAO"/>      
+      <multiplicity id="117" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="118">    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="119" name="memberService"/>      
+      <multiplicity id="120" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="121">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="122" name="memberService"/>      
+      <multiplicity id="123" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="124">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="125" name="adminDAO"/>      
+      <multiplicity id="126" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="127">    
+    <end type="SOURCE" refId="67" navigable="false">      
+      <attribute id="128" name="reportDAO"/>      
+      <multiplicity id="129" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="66" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="130">    
+    <end type="SOURCE" refId="91" navigable="false">      
+      <attribute id="131" name="talkCommentService"/>      
+      <multiplicity id="132" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="101" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="133">    
+    <end type="SOURCE" refId="112" navigable="false">      
+      <attribute id="134" name="TeacherDAO"/>      
+      <multiplicity id="135" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="111" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="136">    
+    <end type="SOURCE" refId="110" navigable="false">      
+      <attribute id="137" name="teacherService"/>      
+      <multiplicity id="138" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="112" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="139">    
+    <end type="SOURCE" refId="60" navigable="false">      
+      <attribute id="140" name="reportService"/>      
+      <multiplicity id="141" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="67" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="142">    
+    <end type="SOURCE" refId="72" navigable="false">      
+      <attribute id="143" name="reviewService"/>      
+      <multiplicity id="144" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="77" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="145">    
+    <end type="SOURCE" refId="92" navigable="false">      
+      <attribute id="146" name="talkService"/>      
+      <multiplicity id="147" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="98" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="148">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="149" name="memberService"/>      
+      <multiplicity id="150" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="151">    
+    <end type="SOURCE" refId="101" navigable="false">      
+      <attribute id="152" name="talkCommentDAO"/>      
+      <multiplicity id="153" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="100" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="154">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="155" name="reviewService"/>      
+      <multiplicity id="156" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="77" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="157">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="158" name="teacherService"/>      
+      <multiplicity id="159" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="112" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="160">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="161" name="searchDAO"/>      
+      <multiplicity id="162" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="86" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="163">    
+    <end type="SOURCE" refId="44" navigable="false">      
+      <attribute id="164" name="noticeDAO"/>      
+      <multiplicity id="165" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="43" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="166">    
+    <end type="SOURCE" refId="53" navigable="false">      
+      <attribute id="167" name="qnaDAO"/>      
+      <multiplicity id="168" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="55" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="169">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="170" name="adminService"/>      
+      <multiplicity id="171" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="172">    
+    <end type="SOURCE" refId="81" navigable="false">      
+      <attribute id="173" name="searchService"/>      
+      <multiplicity id="174" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="85" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="175">    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="176" name="qnaService"/>      
+      <multiplicity id="177" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="178">    
+    <end type="SOURCE" refId="77" navigable="false">      
+      <attribute id="179" name="rDao"/>      
+      <multiplicity id="180" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="78" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="181">    
+    <end type="SOURCE" refId="36" navigable="false">      
+      <attribute id="182" name="noticeService"/>      
+      <multiplicity id="183" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="44" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="184">    
+    <end type="SOURCE" refId="91" navigable="false">      
+      <attribute id="185" name="talkService"/>      
+      <multiplicity id="186" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="98" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="187">    
+    <end type="SOURCE" refId="98" navigable="false">      
+      <attribute id="188" name="talkDAO"/>      
+      <multiplicity id="189" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="99" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

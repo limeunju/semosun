@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="admin-mapper">
+
+	<select id="teacherList" parameterType="boolean" resultType="Teacher">
+		SELECT * FROM TEACHER 
+		<if test="b"> WHERE TSTATUS='N' </if>
+	</select>
+
+	<select id="reportList" parameterType="boolean" resultType="Report">
+		SELECT * FROM Report REP join member M ON(REP.userNo=M.userNo) 
+								 join review R ON(REP.RNO=R.rno) 
+								 join teacher T ON(R.TNO=T.tno)
+		WHERE R.RSTATUS='R'
+	</select>
+
+
+	<update id="tstatusY" parameterType="hashMap">
+		update teacher set tstatus = 
+		<if test="isUpdateY"> 'Y' </if>
+		<if test="!isUpdateY"> 'N' </if>
+		WHERE TNO = #{tNo}
+	</update>
+
+	<update id="RSTATUS" parameterType="hashMap">
+		<if test="isY"> update review set RSTATUS = 'Y' WHERE RNO = #{rno} </if>
+		<if test="!isY"> DELETE FROM REPORT WHERE RNO = #{rno} </if>
+	</update>
+
+	<update id="updateT" parameterType="Teacher">
+<!-- 	Teacher T = new Teacher(tNo, tName, company, subject, profileName); -->
+		update teacher
+			<set>
+				<if test="tName != null"> TNAME = #{tName} , </if>
+				<if test="company != null"> company = #{company} , </if>
+				<if test="subject != null"> subject = #{subject} , </if>
+				<if test="profileName != null"> profileName = #{profileName} , </if>
+			</set>
+		WHERE TNO = #{tNo}
+	</update>
+	
+	<delete id="deleteT" parameterType="int">
+		delete from teacher WHERE TNO = #{tNo}
+	</delete>
+</mapper>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

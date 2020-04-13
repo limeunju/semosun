@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member-mapper">
+
+	<insert id="insertMember" parameterType="Member">
+		INSERT INTO MEMBER
+		VALUES (SEQ_UNO.nextval, #{userId}, #{pwd}, #{nickName}, #{gender},
+		#{email}, DEFAULT, DEFAULT, #{profile}, #{profileName}, #{score1},
+		#{score2}, #{score3}, #{score4}, #{score5})
+	</insert>
+
+	<insert id="createAuthKey" parameterType="map">
+		insert into userAuth values(#{email}, #{authKey})
+	</insert>
+
+	<update id="userAuth">
+	<![CDATA[update MEMBER 
+			 set ERECIVE = 1 
+			 where (select count(*) 
+			 		from userAuth 
+			 		where userEmail = #{email} 
+			 		  and authkey= #{authKey}) > 0
+			   and email = #{email} ]]>
+	</update>
+
+
+	
+	<select parameterType="Member" resultType="Member" id="selectOneMember">
+		SELECT * FROM MEMBER
+		WHERE USERID = #{userId}
+		AND ERECIVE = 1
+	</select>
+	
+	<delete  id="DeleteOneMember" parameterType="Member">
+		DELETE FROM MEMBER
+		WHERE USERID = #{userId}
+	</delete>
+
+	<update id="updateMember" parameterType="Member">
+		UPDATE MEMBER 
+		<set>
+			<if test="nickName != null">
+				NICKNAME=#{nickName},
+			</if>
+			<if test="email != null">
+				EMAIL = #{email},
+			</if>
+			<if test="pwd != null">
+			 	PWD = #{pwd},
+			</if>
+			<if test="profile != null">
+				PROFILE = #{profile},
+			</if>
+			<if test="profileName != null">
+			 	PROFILENAME = #{profileName},
+			</if>
+			SCORE1 = #{score1}, SCORE2 = #{score2}, SCORE3 = #{score3}, SCORE4 = #{score4}, SCORE5 = #{score5}
+		</set> 
+		WHERE USERID = #{userId}
+	</update>
+	
+	<select id="checkIdDuplicate" parameterType="hashmap" statementType="CALLABLE">
+
+<!-- 	CALLABLE Statement는 일반 Statement, PreparedStatement와는 다른게 프로시져(PL/SQL)를 호출하는 전용 실행 문법이다. -->
+	
+<!-- 	CallableStatement는 {}로 묶어 실행하며, 시작 괄호'{'다음에 Tab을 사용할 경우 값을 읽지 못한다. -->
+<!-- 	 result 란 키에 값이 들어있음 -->
+		{ CALL ID_DUP_CHK( #{userId, mode=IN, jdbcType=VARCHAR},
+		#{result, mode=OUT, jdbcType=NUMERIC, javaType=integer})}
+	</select>
+	
+	<select id="checkEmailDup" parameterType="hashmap" statementType="CALLABLE">
+		{ CALL EMAIL_DUP_CHK(#{email, mode=IN, jdbcType=VARCHAR},
+		#{result, mode=OUT, jdbcType=NUMERIC, javaType=integer})}
+	</select>
+	
+	<select parameterType="int" resultType="Teacher" id="selectTeacherList">
+		SELECT T.*, M.USERNO, M.NICKNAME
+			FROM TEACHER T
+			LEFT JOIN MEMBER M ON(T.USERNO = M.USERNO)
+			WHERE M.USERNO = #{userNo}
+			ORDER BY TDATE DESC
+	</select>
+	
+	<select id="selectTotalContents" resultType="int" parameterType="int">
+			SELECT COUNT(*) FROM (SELECT T.*, M.USERNO, M.NICKNAME
+				FROM TEACHER T
+				LEFT JOIN MEMBER M ON(T.USERNO = M.USERNO)
+				WHERE M.USERNO = #{userNo})
+	</select>
+	
+	<select id="selectOneTeacher" parameterType="int" resultType="Teacher">
+		SELECT * FROM TEACHER
+		WHERE TNO = #{tNo}
+	</select>
+	
+	
+	<select id="selectReviewList" parameterType="int" resultType="Teacher">
+		SELECT T.* FROM REVIEW R JOIN TEACHER T ON(R.TNO=T.TNO)
+		WHERE RNO = (SELECT MAX(RNO) FROM REVIEW WHERE TNO = R.TNO AND USERNO = #{userNo})
+		ORDER BY RNO DESC
+	</select>
+	
+	<select id="selectOneReview" parameterType="int" resultType="Review">
+		SELECT * FROM REVIEW
+		WHERE RNO = #{rno}
+	</select>
+	
+	<select parameterType="int" id="selectReportList"
+		resultType="Report">SELECT R.*, M.USERNO, M.NICKNAME FROM REPORT R LEFT JOIN
+		MEMBER M ON(R.USERNO = M.USERNO) WHERE M.USERNO = #{userNo}ORDER BY
+		REF_DATE DESC
+	</select>
+
+	<select parameterType="int" id="selectReportTotalContents"
+		resultType="int">
+		SELECT COUNT(*) FROM (SELECT R.*, M.USERNO, M.NICKNAME FROM
+		REPORT R LEFT JOIN MEMBER M ON(R.USERNO = M.USERNO)WHERE M.USERNO =
+		#{userNo})
+
+	</select>
+
+	<select parameterType="int" id="selectLikeyList"
+		resultType="Likey">SELECT L.*, T.TNAME, T.TNO FROM LIKEY L LEFT JOIN MEMBER M
+		ON(L.USERNO = M.USERNO)LEFT JOIN TEACHER T ON(L.RTNO = T.TNO)WHERE
+		M.USERNO = #{uesrNo}ORDER BY LDATE DESC
+	</select>
+
+	<select parameterType="int" id="selectLikeyTotalContents"
+		resultType="int">
+		SELECT COUNT(*) FROM (SELECT L.*, M.USERNO, M.NICKNAME FROM
+		LIKEY L
+		LEFT JOIN MEMBER M ON(L.USERNO = M.USERNO)WHERE M.USERNO = #{userNo})
+	</select>
+</mapper>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

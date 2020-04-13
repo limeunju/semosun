@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC
+"-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	
+	<settings> <!-- 마이바티스 설정을 담당하는 부분 -->
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+
+	<!-- 나중에 SQL에서 사용할 때 직접 내용을 적지않고 별칭으로도 접근이 가능하다. 내가쓸 vo 계속 추가 -->
+ 	<!-- type : class full name / alias : 사용하려는 객체 별칭 -->
+ 	
+ 	<typeAliases> 
+ 	<!-- 마이바티스 = dao의 부하, DB왔다갔다함 -->
+	<!-- 마이바티스 컨피스 = 마이바티스 환경설정 -->
+	
+		<!-- 사람 : 회원, 강사 -->
+		<typeAlias type="com.oceans.semosun.member.model.vo.Member" alias="Member"/>
+		<typeAlias type="com.oceans.semosun.teacher.model.vo.Teacher" alias="Teacher"/>
+		
+		<!-- 리뷰 -->
+		<typeAlias type="com.oceans.semosun.review.model.vo.Review" alias="Review"/>
+		
+		<!-- 공지사항 -->
+		<typeAlias alias="Notice" type="com.oceans.semosun.notice.model.vo.Notice"/>
+		
+		<!-- 세모선숲 -->
+		<typeAlias alias="Talk" type="com.oceans.semosun.talk.model.vo.Talk"/>
+		<typeAlias type="com.oceans.semosun.talk.model.vo.TalkComment" alias="TalkComment" />
+			<!-- 상호씨가 만든 조인 객체 -->
+			<typeAlias alias="TalknMember" type="com.oceans.semosun.search.model.vo.TalknMember"/>
+		<!-- 신고 게시판 -->
+		<typeAlias alias="Report" type="com.oceans.semosun.report.model.vo.Report"/>	
+		
+		<!-- QNA -->
+		<typeAlias type="com.oceans.semosun.qna.model.vo.Qna" alias="Qna"/>
+		
+		<typeAlias type="com.oceans.semosun.like.model.vo.Likey" alias="Likey"/>
+	</typeAliases>
+	
+</configuration>
+
+
+
+
+
+
+
+
+
+

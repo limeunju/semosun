@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Talk-mapper">
+	<select id="selectList" parameterType="String" resultType="Talk">
+		SELECT * FROM TALK JOIN member USING(USERNO) WHERE TSTATUS = 'N'
+		<if test="keyword != null">
+			and TALKCONTENT LIKE (#{keyword})
+		</if>
+		 ORDER BY TALKDATE DESC
+	</select>
+	
+	<select id="selectTotalContents" resultType="int">
+		SELECT COUNT(*) FROM TALK WHERE TSTATUS = 'N'
+	</select>
+	
+	<select id="selectListTalk" resultType="Talk">
+		SELECT * FROM TALK JOIN member USING(USERNO) WHERE TSTATUS = 'N' ORDER BY TALKDATE DESC
+	</select>
+
+	<insert id="insertTalk" parameterType="Talk">
+		INSERT INTO talk VALUES(SEQ_TALKNO.NEXTVAL, #{userno} , #{talkcontent}, DEFAULT, DEFAULT, DEFAULT)
+	</insert>
+	
+	<update id="updateTalk" parameterType="Talk">
+		UPDATE TALK
+		SET TALKCONTENT = #{talkcontent}
+		WHERE TALKNO = #{talkno}
+	</update>
+	
+	<select id="selectTalk" parameterType="_int" resultType="Talk">
+		SELECT * FROM TALK JOIN member USING(USERNO) WHERE TALKNO = #{talkno} AND TSTATUS = 'N'
+	</select>
+
+
+	<update id="deleteTalk" parameterType="int">
+		UPDATE TALK SET TSTATUS = 'Y' WHERE TALKNO = #{talkno}
+	</update>
+	
+	<select id="selectLive" resultType="talk">
+		select * from talk t
+		join member m on (t.userno = m.userno)
+		ORDER BY TALKDATE
+	</select>
+
+	<select id="searchingRank" resultType="String">
+<![CDATA[SELECT TK.KKEYWORD KEYWORD
+		 FROM TALK_KEYWORD TK JOIN (SELECT KNO, COUNT(*) CNT 
+		                            FROM TALK_KEYWORD_DATE 
+		                            WHERE SEARCHDATE > SYSDATE - 1
+		                            GROUP BY KNO) TD 
+		 	  ON(TK.KNO=TD.KNO)
+		 WHERE KKEYWORD != '%%' 
+		 ORDER BY TD.CNT DESC ]]>
+	</select>
+	
+	<select id="totalSearchingRank" resultType="String">
+		SELECT KKEYWORD FROM TALK_KEYWORD WHERE KKEYWORD != '%%' ORDER BY KCOUNT DESC
+	</select>
+
+	<update id="mergeKeyword" parameterType="String">
+		MERGE INTO TALK_KEYWORD TK
+		USING (SELECT #{keyword} KKEYWORD FROM DUAL) K
+		ON (TK.KKEYWORD = K.KKEYWORD)
+		WHEN MATCHED THEN 
+		UPDATE SET TK.KCOUNT=(TK.kcount+1)
+		WHEN NOT MATCHED THEN
+		INSERT VALUES(SEQ_TALK_KEYWORD.NEXTVAL, #{keyword}, DEFAULT)
+	</update>
+	
+	<delete id="keywordCookiesDelete">
+<![CDATA[DELETE FROM TALK_KEYWORD_DATE WHERE SEARCHDATE < SYSDATE - 1]]>
+	</delete>
+	
+	<select id="talkWordcloud" resultType="String">
+		SELECT TALKCONTENT FROM TALK WHERE TSTATUS = 'N'
+		UNION ALL
+		SELECT CCONTENT FROM TCOMMENT WHERE CSTATUS = 'N'
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+

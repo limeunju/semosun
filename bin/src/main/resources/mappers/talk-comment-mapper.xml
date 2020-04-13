@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Talk-Comment-mapper">
+	<select id="selectTotalContents" resultType="int">
+		SELECT COUNT(*) FROM TALKCOMMENT WHERE CSTATUS = 'N' 
+	</select>
+	
+	<select id="selectListTalkComment" parameterType = "int" resultType="TalkComment">
+		SELECT * FROM TCOMMENT JOIN member USING(USERNO) WHERE CSTATUS = 'N' AND TALKNO = #{talkno} ORDER BY CDATE DESC
+	</select>
+
+	<insert id="insertTalkComment" parameterType="TalkComment">
+		INSERT INTO TCOMMENT VALUES(SEQ_COMMENTNO.NEXTVAL, #{talkno}, #{userno}, #{ccontent}, DEFAULT, DEFAULT)
+	</insert>
+	<update id="updateTalkComment" parameterType="TalkComment">
+		UPDATE TCOMMENT
+		<set>
+			<if test="ccontent != null">
+				CCONTENT = #{ccontent},
+			</if>
+
+		</set>
+		WHERE COMMENTNO = #{commentno}
+		</update>
+		
+	<update id="deleteTalkComment" parameterType="int">
+		UPDATE TCOMMENT SET CSTATUS = 'Y' WHERE COMMENTNO = #{commentno}
+	</update>
+</mapper>

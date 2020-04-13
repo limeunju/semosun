@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Teacher-mapper">
+	<insert id="insertTeacher" parameterType="Teacher">
+		INSERT INTO TEACHER
+		VALUES (SEQ_TNO.nextval,#{userNo}, #{tName}, #{tGender}, #{company}, #{subject}, 
+		#{profile}, #{profileName}, DEFAULT, DEFAULT)
+	</insert>
+	
+<!-- 	<select id="selectList" resultType="Teacher"> -->
+<!-- 		SELECT * FROM TEACHER -->
+<!-- 		WHERE TSTATUS = 'Y' -->
+<!-- 	</select> -->
+
+	<select id="selectList" parameterType="Member" resultType="Teacher">
+	SELECT  T.TNO, T.TNAME, 
+	
+			 ROUND(5-SQRT((POWER((AVG(SCORE1)-#{score1}), 2)+ POWER((AVG(SCORE2)-#{score2}), 2)+ 
+		     POWER((AVG(SCORE3)-#{score3}), 2)+ POWER((AVG(SCORE4)-#{score4}), 2)+ POWER((AVG(SCORE5)-#{score5}), 2))/5), 2)*(#{percent}/5) +
+		     NVL(ROUND((AVG(SCORE6)+AVG(SCORE7)+AVG(SCORE8)+AVG(SCORE9)+AVG(SCORE10))/5, 2), 0)*((100-#{percent})/5) PERCENT,
+		     
+		     NVL(ROUND(AVG(SCORE1), 2), 0) SCORE1, NVL(ROUND(AVG(SCORE2), 2), 0) SCORE2, NVL(ROUND(AVG(SCORE3), 2), 0) SCORE3, NVL(ROUND(AVG(SCORE4), 2), 0) SCORE4, NVL(ROUND(AVG(SCORE5), 2), 0) SCORE5,
+		     
+		     T.PROFILENAME, T.SUBJECT, T.COMPANY
+		FROM REVIEW R RIGHT OUTER JOIN teacher T ON(R.TNO=T.TNO)
+		WHERE T.TNO IN (SELECT TNO FROM TEACHER WHERE TSTATUS='Y') AND R.RSTATUS = 'N'
+		GROUP BY T.TNO, T.TNAME, T.PROFILENAME, T.SUBJECT, T.COMPANY
+		
+		UNION
+		
+		SELECT TNO, TNAME, NULL, NULL, NULL, NULL, NULL, NULL, PROFILENAME, SUBJECT, COMPANY
+		FROM TEACHER WHERE TNO NOT IN(SELECT DISTINCT TNO FROM REVIEW WHERE RSTATUS = 'N') AND TSTATUS = 'Y'
+		
+		ORDER BY 3 DESC NULLS LAST
+	</select>
+	
+	<select id="selectTotalContents" resultType="int">
+		SELECT COUNT(*) FROM TEACHER
+	</select>
+	
+	<select id="teacherChart" parameterType="int" resultType="hashmap">
+		SELECT NVL(TO_CHAR(ROUND(AVG((SCORE6 + SCORE7 + SCORE8 + SCORE9 + SCORE10)/5), 2)), 0) TOTAL,
+              NVL(TO_CHAR(ROUND(AVG(SCORE1), 2)), 0) score1,  
+              NVL(TO_CHAR(ROUND(AVG(SCORE2), 2)), 0) score2, 
+              NVL(TO_CHAR(ROUND(AVG(SCORE3), 2)), 0) score3,  
+              NVL(TO_CHAR(ROUND(AVG(SCORE4), 2)), 0) score4,  
+              NVL(TO_CHAR(ROUND(AVG(SCORE5), 2)), 0) score5
+		FROM REVIEW
+		WHERE TNO = #{tNo} AND RSTATUS = 'N'
+	</select>
+	
+	<select id="getTeacherCount" resultType="int">
+		SELECT COUNT(*) FROM TEACHER
+		WHERE TSTATUS = 'Y'
+	</select>
+	
+	<select id="getReviewCount" resultType="int">
+		SELECT COUNT(*) FROM REVIEW
+		WHERE RSTATUS = 'N'
+	</select>
+	
+	<select id="selectLive" resultType="Teacher">
+	SELECT  T.TNO, T.TNAME,
+        NVL(ROUND((AVG(SCORE1)+AVG(SCORE2)+AVG(SCORE3)+AVG(SCORE4)+AVG(SCORE5))/5, 2), 0) AVG,		    
+        T.PROFILENAME, T.SUBJECT, T.COMPANY
+		FROM REVIEW R RIGHT OUTER JOIN teacher T ON(R.TNO=T.TNO)
+		WHERE (RSTATUS = 'N' OR RSTATUS IS NULL) AND T.TNO IN (SELECT TNO FROM TEACHER WHERE TSTATUS='Y')
+        GROUP BY T.TNO, T.TNAME, T.PROFILENAME, T.SUBJECT, T.COMPANY
+        ORDER BY T.TNO DESC
+	</select>
+	
+</mapper>
+ 

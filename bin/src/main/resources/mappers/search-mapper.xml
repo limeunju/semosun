@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="search-mapper">
+	
+	<!-- 
+	<resultMap id="resultMyMap" type="VO 이름">
+	<!-//- 조인할때 type에 컬럼을 모두 포함하는 class vo가 하나 필요하다 -//->
+		<!-//- 기본키 column : DB의 컬럼명 / property : VO의 변수명 -//->
+		<id column="" property=""/>
+		<!-//- 나머지 컬럼 column : DB의 컬럼명 / property : VO의 변수명 -//->
+		<result column="" property=""/>
+	</resultMap>
+	 -->
+	 
+	<select id="selectTeacherList" parameterType="string" resultType="Teacher">
+	<!-- concat을 쓰는 이유는 %||#{keyword}||%이렇게 하는 ||기호는 오라클 봐께 못써서 concat을 써줘야한다. -->
+		SELECT * FROM TEACHER
+		WHERE (TNAME LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+  		   OR COMPANY LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+  		   OR SUBJECT LIKE CONCAT(CONCAT('%', #{keyword}), '%')		)
+  		   AND TSTATUS = 'Y'
+	</select>
+
+
+	<select id="selectReviewList" parameterType="string" resultType="Review">
+     SELECT RR.company,RR.subject,RR.tname,RR.PROFILENAME,RR.RTITLE,RR.NICKNAME 
+     FROM (SELECT M.*,R.*,t.company,t.subject,t.tname FROM REVIEW R
+	 JOIN  MEMBER M ON(R.USERNO=M.USERNO)
+     JOIN TEACHER T ON(R.TNO=T.TNO)
+     ORDER BY RDATE DESC)RR
+	 WHERE (RTITLE LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+ 	   OR GCONTENT LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+ 	   OR PROFILENAME LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+ 	   OR TNAME LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+       OR COMPANY LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+  	   OR SUBJECT LIKE CONCAT(CONCAT('%', #{keyword}), '%'))
+  		AND RSTATUS != 'Y'
+	</select>
+
+	<select id="selectTalkList" parameterType="string" resultType="TalknMember">
+		SELECT TT.* FROM(SELECT T.*, m.nickname, m.profilename FROM TALK T
+		JOIN MEMBER M ON(M.USERNO=T.USERNO)
+		ORDER BY t.talkdate) TT
+	WHERE TALKCONTENT LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+ 	   OR NICKNAME LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+	
+	</select>
+		
+		<select  id="selectNoticeList" parameterType="string" resultType="Notice" >
+			SELECT * FROM NOTICE
+			WHERE NOTICETITLE LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+ 	 		 OR NOTICECONTENT LIKE CONCAT(CONCAT('%', #{keyword}), '%')
+		</select>
+	
+	
+	
+	<!-- 메인화면에서 쓸거 -->
+<!-- 	<select id="teacherList" parameterType="string" resultType="Teacher"></select> -->
+<!-- 	<select id="talkList"   parameterType="string" resultType="TalknMember"></select> -->
+<!-- 	<select id="noticeList" parameterType="string" resultType="Notice"></select> -->
+<!-- 	<select id="reviewList" parameterType="string" resultType="Review"></select> -->
+		<select id="memberCount" resultType="int">
+			SELECT count(*) FROM MEMBER
+		</select>
+		<select id="reviewCount" resultType="int">
+			SELECT count(*) FROM review
+		</select>
+		<select id="teacherCount" resultType="int">
+			SELECT count(*) FROM teacher
+		</select>
+		<select id="supCount" resultType="int">
+			SELECT count(*) FROM TALK
+		</select>
+		<select id="noticeCount" resultType="int">
+			SELECT count(*) FROM notice
+		</select>
+<!-- 		<select id="totalCount" resultType="int"> -->
+<!-- 			SELECT (SELECT count(*) FROM MEMBER), -->
+<!-- 			       (SELECT count(*) FROM review), -->
+<!-- 			       (SELECT count(*) FROM teacher), -->
+<!-- 			       (SELECT count(*) FROM TALK), -->
+<!-- 			       (SELECT count(*) FROM notice) -->
+<!-- 			FROM DUAL -->
+<!-- 		</select> -->
+
+
+
+</mapper>

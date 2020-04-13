@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- Root Context: 웹 서버 전반적으로 사용될 설정들과 관련된 내용을 작성하는 XML 문서 -->
+	
+					<!--  DataSource : 연결하고자 하는 DB 설정을 담당하는 객체  -->
+					<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+						<!-- oracle.jdbc.driver.OracleDriver : 옛날 거 -->
+						<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+						<property name="url" value="jdbc:oracle:thin:@localhost:1521:system"/>
+						<property name="username" value="SEMOSUN"/>
+						<property name="password" value="SEMOSUN"/>
+					</bean>
+		
+			<!--  Mybatis 연동 설정  -->
+			<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+				<!--  dataSource : 마이바티스 빈 객체에 사용할 DB 설정 객체 참조  -->
+				<property name="dataSource" ref="dataSource"/>
+				
+				<!-- mapperLocations : mybatis-config에 작성하였던 mapper 파일들을 한번에 불러오기 위한 설정 -->
+				<property name="mapperLocations" value="classpath*:mappers/*.xml"/>
+				
+				<!--  configLocation : mybatis-config 설정을 읽어 오기 위한 속성  -->
+				<property name="configLocation" value="classpath:mybatis-config.xml"/>
+			</bean>
+	
+	<!--  Mybatis 사용과 관련된 sqlSessionTemplate 등록하기  -->
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactoryBean"/>
+	</bean>
+	
+	<!--  트랜잭션 처리와 관련된 매니저(스프링에게 인계) 객체 설정  -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<!-- 트랜잭션 처리 방식 -->
+	<!-- 선언적 AOP 처리 방식 (XML 방식) -->
+	
+	<!-- 트랜잭션 처리를 위한 advice 구간 설정 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<!-- 트랜잭션 처리할 메소드 등록하기 -->
+		<tx:attributes>
+			<tx:method name="select*" rollback-for="Exception" read-only="true" />
+			<tx:method name="insert*" rollback-for="Exception" />
+			<tx:method name="update*" rollback-for="Exception" />
+			<tx:method name="delete*" rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<!-- 프로그래밍적 AOP 처리 방식 (어노테이션 처리 방식) -->
+	<aop:aspectj-autoproxy />
+	
+	 <!-- 메일 보내기 (SEND) -->
+   <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+      <property name="host" value="smtp.gmail.com" />
+      <property name="port" value="587" />
+      <property name="username" value="semosun123@gmail.com" />
+      <property name="password" value="semosunadmin1!" />
+    
+
+      <!-- email 요청시는 SMTP -->
+      <property name="javaMailProperties">
+         <props>
+            <prop key="mail.transport.protocol">smtp</prop>
+            <prop key="mail.smtp.auth">true</prop>
+            <prop key="mail.smtp.starttls.enable">true</prop>
+            <prop key="mail.debug">true</prop>
+         </props>
+      </property>
+   </bean>
+	
+	
+</beans>

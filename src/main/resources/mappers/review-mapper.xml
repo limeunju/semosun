@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="review-mapper">
+
+	<insert id="insertReview" parameterType="Review">
+		INSERT INTO REVIEW VALUES(SEQ_RNO.NEXTVAL, #{tNo}, #{userNo}, #{rtitle}, #{gcontent}, #{bcontent}, #{score1}, #{score2}, #{score3}, #{score4}, #{score5}, #{score6}, #{score7}, #{score8}, #{score9}, #{score10}, DEFAULT, DEFAULT)
+	</insert>
+
+	<update id="updateReview" parameterType="Review">
+		UPDATE REVIEW SET TNO = #{tNo}, USERNO = #{userNo}, RTITLE = #{rtitle}, GCONTENT = #{gcontent}, BCONTENT = #{bcontent}, 
+						  SCORE1 = #{score1}, SCORE2 = #{score2}, SCORE3 = #{score3}, SCORE4 = #{score4}, SCORE5 = #{score5}, 
+						  SCORE6 = #{score6}, SCORE7 = #{score7}, SCORE8 = #{score8}, SCORE9 = #{score9}, SCORE10 = #{score10}
+						  WHERE RNO = #{rno}
+	</update>
+	
+	<update id="deleteReview" parameterType="int">
+		UPDATE REVIEW SET RSTATUS = 'Y' WHERE RNO = #{rno}
+	</update>
+	
+	<delete id="deleteReport" parameterType="int">
+		DELETE FROM REPORT WHERE RNO = #{rno}
+	</delete>
+	
+	
+	
+	<select id="selectListTeacherReview" parameterType="hashmap" resultType="Review">
+		SELECT r.*, m.nickname, m.profilename , (SELECT COUNT(*) FROM likey where rno = r.rno) likeCount
+                                        <if test="userNo != 0">
+                                        , (SELECT COUNT(*) FROM likey WHERE RNO = r.rno AND USERNO = #{userNo}) checkLike
+                                        </if>
+		FROM review r JOIN member m on(r.USERNO = m.USERNO) 
+		WHERE TNO = #{tNo} AND r.RSTATUS != 'Y' ORDER BY RDATE DESC
+	</select>
+	
+	<select id="selectOneTeacher" parameterType="int" resultType="Teacher">
+		SELECT * FROM TEACHER WHERE TNO = #{tNo} AND TSTATUS = 'Y'
+	</select>
+	
+	<select id="selectOneReview" parameterType="int" resultType="Review">
+		SELECT * FROM REVIEW join member using (userno) 
+		WHERE RNO = #{rno} AND RSTATUS = 'R'
+	</select>
+	
+	<select id="reviewLevel" parameterType="int" resultType="hashmap">
+	<![CDATA[
+		SELECT COUNT(CASE WHEN TOTAL < 3 THEN 1 END) REVIEW_0,
+              COUNT(CASE WHEN TOTAL < 4 AND TOTAL >= 3 THEN 1 END) REVIEW_1,
+               COUNT(CASE WHEN TOTAL > 4 THEN 1 END) REVIEW_2
+		FROM (SELECT (SCORE6 + SCORE7 + SCORE8 + SCORE9 + SCORE10)/5 TOTAL 
+             FROM REVIEW 
+             WHERE TNO = #{tNo} AND RSTATUS = 'N')
+    ]]>
+	</select>
+	
+	<!-- index -->
+	<select id="selectLive" resultType="Review">
+		SELECT R.*, M.PROFILENAME, T.TNAME, T.SUBJECT, T.COMPANY
+		FROM REVIEW R, MEMBER M, TEACHER T
+		WHERE R.USERNO = M.USERNO
+		  AND R.TNO = T.TNO
+		ORDER BY 1 DESC
+	</select>
+	
+	<select id="selectBestReview" resultType="Review">
+		SELECT R.*, T.TNAME, T.PROFILENAME, T.SUBJECT, T.COMPANY, (SELECT COUNT(*) FROM likey where rno = R.rno) likeCount
+	
+		FROM REVIEW R, TEACHER T
+		WHERE R.TNO = T.TNO
+		ORDER BY (SELECT COUNT(*) 
+		          FROM LIKEY 
+		          WHERE R.RNO = LIKEY.RNO) DESC
+	</select>
+	<!-- index -->
+	
+	<select id="totalReviewPerTeacher" parameterType="int" resultType="int">
+		SELECT COUNT(*) FROM REVIEW WHERE TNO = #{tNo} AND RSTATUS = 'N'
+	</select>
+<!-- 	SELECT COUNT(*) , NVL((AVG(SCORE6)+AVG(SCORE7)+AVG(SCORE8)+AVG(SCORE9)+AVG(SCORE10))/5, 0) FROM REVIEW WHERE TNO = 61 AND RSTATUS = 'N'; -->
+	<select id="averagePerTeacher" parameterType="int" resultType="float">
+		SELECT NVL(ROUND((AVG(SCORE6)+AVG(SCORE7)+AVG(SCORE8)+AVG(SCORE9)+AVG(SCORE10))/5, 2), 0) FROM REVIEW WHERE TNO = #{tNo} AND RSTATUS = 'N'
+	</select>
+	
+	<!-- like -->
+	<insert parameterType="hashmap" id="insertLikeReview">
+		INSERT INTO LIKEY VALUES(#{rno}, #{tNo}, #{userNo}, DEFAULT, DEFAULT) 
+	</insert>
+	
+	<delete id="deleteLikeReview" parameterType="hashmap">
+		DELETE FROM LIKEY WHERE RNO = #{rno} AND USERNO = #{userNo}
+	</delete>
+	<!-- like -->
+	
+<!-- 	<select id="selectListTalk" resultType="Talk"> -->
+<!-- 		SELECT * FROM TALK JOIN member USING(USERNO) WHERE TSTATUS = 'N' ORDER BY TALKDATE DESC -->
+<!-- 	</select> -->
+	
+<!-- 	<select id="selectTalk" parameterType="_int" resultType="Talk"> -->
+<!-- 		SELECT * FROM TALK JOIN member USING(USERNO) WHERE TALKNO = #{talkno} AND TSTATUS = 'N' -->
+<!-- 	</select> -->
+
+
+
+</mapper>
